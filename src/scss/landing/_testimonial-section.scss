@@ -1,0 +1,178 @@
+@use '../global/resets';
+
+.testimonial-section {
+	margin-bottom: 8em;
+	position: relative;
+
+	.gradient-dot {
+		position: absolute;
+		top: -10%;
+		// left: -20%;
+		width: 100%;
+		opacity: 0.5;
+
+		@media screen and (min-width: 62em) {
+			left: -20%;
+			width: 130%;
+		}
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		padding: 2em 0;
+
+		.text-area {
+			width: 90%;
+			margin: 0 auto;
+			margin-bottom: 3em;
+			position: relative;
+			text-align: center;
+			padding: 0 1em;
+
+			.circle-img {
+				position: absolute;
+				top: -70%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				// width: 100%;
+
+				@media screen and (max-width: 62em) {
+					top: 0%;
+					// left: -5%;
+				}
+
+				@media screen and (max-width: 43em) {
+					top: 30%;
+					left: -5%;
+				}
+			}
+
+			.heading {
+				color: resets.$grey;
+				font-size: 2.5rem;
+				margin-bottom: 0.2em;
+				position: relative;
+				z-index: 1;
+			}
+
+			.subtext {
+				line-height: 1.9;
+				margin-bottom: 1.3em;
+				position: relative;
+				z-index: 1;
+				color: resets.$grey;
+				font-size: 18px;
+			}
+
+			.btn-wrap {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				z-index: 1;
+
+				.btn {
+					@include resets.main-btn();
+				}
+			}
+		}
+
+		.review-card {
+			width: 100%;
+			height: 390px;
+			position: relative;
+			margin-bottom: 4em;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: rgb(0, 0, 0, 0.6);
+				border-radius: 20px;
+			}
+
+			.img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 20px;
+				object-position: top;
+			}
+
+			.play-btn {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				height: 50px;
+				width: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: resets.$light;
+				border: none;
+				border-radius: 50%;
+				cursor: pointer;
+
+				.fa-solid {
+					color: red;
+				}
+			}
+		}
+	}
+
+	.brand-wrap {
+		display: flex;
+		gap: 1em;
+		position: relative;
+		z-index: 1;
+
+		.card {
+			height: 140px;
+			width: 100%;
+			background: resets.$light;
+			box-shadow: -5px 2px 30px rgba(0, 0, 0, 0.089);
+
+			display: grid;
+			place-items: center;
+			place-content: center;
+			color: resets.$grey;
+
+			.heading {
+				font-size: 1.6rem;
+			}
+		}
+
+		@media screen and (max-width: 43em) {
+			display: grid;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		width: 80%;
+		margin: 0 auto 7em;
+
+		.text-area {
+			text-align: center;
+
+			.highlight {
+				margin: 0 auto 0.9em;
+			}
+
+			.heading {
+				padding-right: 0 !important;
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		margin-bottom: 12em;
+
+		.review-card {
+			height: 380px;
+		}
+	}
+}

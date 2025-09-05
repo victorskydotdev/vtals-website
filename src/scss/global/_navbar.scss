@@ -1,0 +1,122 @@
+@use '../global/resets';
+
+.navbar {
+	// background: teal;
+	height: 15vh;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	// display: none;
+	transition: all 500ms ease-in-out;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include resets.breakpoints();
+
+		.brand-wrap {
+			background: red;
+		}
+
+		.nav-links {
+			display: none;
+
+			.wrap {
+				.link-list {
+					.link {
+						@include resets.teachers-font();
+						font-weight: 600;
+					}
+
+					.contact {
+						@include resets.btn();
+						background: resets.$light;
+					}
+				}
+			}
+
+			.social-media-wrap {
+				.facebook,
+				.instagram,
+				.x-twitter {
+					color: resets.$light;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.hamburger {
+			.menu-btn {
+				border: none;
+				background: red;
+				height: 50px;
+				width: 50px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+		}
+		@media screen and (min-width: 62em) {
+			.nav-links {
+				display: flex;
+				gap: 2em;
+				// background: teal;
+				width: 60%;
+				justify-content: space-between;
+
+				.wrap {
+					display: flex;
+					gap: 3em;
+
+					.link-list {
+						.link {
+							color: resets.$light;
+						}
+					}
+				}
+
+				.social-media-wrap {
+					display: flex;
+					gap: 2em;
+				}
+			}
+
+			.hamburger {
+				display: none;
+			}
+		}
+	}
+}
+
+.update-nav-bg {
+	background: resets.$light;
+
+	.container {
+		.nav-links {
+			.wrap {
+				.link-list {
+					.link {
+						color: grey;
+					}
+
+					.contact {
+						background: resets.$secondary-color;
+						color: resets.$light !important;
+					}
+				}
+			}
+
+			.social-media-wrap {
+				.facebook,
+				.instagram,
+				.x-twitter {
+					color: grey;
+				}
+			}
+		}
+	}
+}

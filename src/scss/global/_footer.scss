@@ -1,0 +1,85 @@
+@use '../global/resets';
+
+.footer {
+	background: resets.$dark;
+	min-height: 350px;
+	padding-top: 5em;
+	padding-bottom: 4em;
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+		gap: 3em;
+
+		.wrap {
+			color: resets.$light;
+			max-width: 400px;
+
+			.wrapper {
+				.heading {
+					margin-bottom: 1em;
+					font-size: 1.3rem;
+				}
+
+				.footer-links {
+					display: grid;
+					gap: 1.3em;
+
+					.link {
+						color: resets.$light;
+					}
+				}
+
+				.newsletter-form {
+					width: 100%;
+					position: relative;
+					margin-bottom: 2em;
+
+					.form-input {
+						width: 0%;
+
+						width: 100%;
+						height: 40px;
+						border-radius: 8px;
+						border: none;
+						padding-left: 10px;
+					}
+
+					.btn-wrap {
+						position: absolute;
+						left: 88%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+
+						.submit-btn {
+							@include resets.btn();
+							background: resets.$secondary-color;
+							color: resets.$light !important;
+							padding: unset;
+							padding: 0.4em 1em;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			.social-media-wrap {
+				display: flex;
+				gap: 1em;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

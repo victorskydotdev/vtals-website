@@ -1,0 +1,132 @@
+@use '../global/resets';
+
+.main-showcase-section {
+	margin-bottom: 10em;
+	overflow: hidden;
+
+	.container {
+		display: grid;
+		gap: 5em;
+		background: resets.$dark;
+		padding: 6em 0;
+
+		.showcase-swiper {
+			// min-height: 400px;
+			width: 100%;
+
+			.text-area {
+				color: resets.$light;
+				width: 90%;
+				margin: 0 auto 3em;
+				text-align: center;
+
+				.heading {
+					width: 100%;
+					margin-bottom: 0.5em;
+					font-size: 2.5rem;
+				}
+
+				.text {
+					width: 100%;
+					line-height: 30px;
+				}
+
+				@media screen and (min-width: 43em) {
+					width: 80%;
+				}
+
+				@media screen and (min-width: 62em) {
+					width: 95%;
+					display: flex;
+					align-items: center;
+					text-align: left;
+					width: 90%;
+					gap: 4em;
+
+					.heading {
+						width: fit-content;
+						// white-space: nowrap;
+						line-height: 0.2;
+					}
+
+					.text {
+						width: 500px;
+					}
+				}
+			}
+
+			.swiper-wrapper {
+				.swiper-slide {
+					width: 350px;
+					height: 380px;
+					background: teal;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: 20px;
+						display: none;
+					}
+				}
+			}
+
+			.swiper-button-prev,
+			.swiper-button-next {
+				--swiper-navigation-size: 1.5em;
+				color: resets.$light;
+				background: resets.$secondary-color;
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+
+				@media screen and (min-width: 62em) {
+					position: absolute;
+					top: 5%;
+					z-index: 100 !important;
+				}
+
+				@media screen and (max-width: 43em) {
+					top: 67% !important;
+				}
+			}
+
+			.swiper-button-prev {
+				left: 83% !important;
+
+				@media screen and (max-width: 62em) {
+					left: 1% !important;
+				}
+			}
+
+			.swiper-button-next {
+				left: 87% !important;
+
+				@media screen and (max-width: 62em) {
+					left: unset !important;
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+			}
+
+			@media screen and (min-width: 62em) {
+				.swiper-wrapper {
+					padding-left: unset;
+
+					.swiper-slide {
+						width: 340px;
+						height: 400px;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 98%;
+			margin: 0 auto;
+			// padding-left: 2em;
+			border-radius: 30px;
+		}
+	}
+}
