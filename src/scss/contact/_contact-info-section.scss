@@ -83,14 +83,14 @@
 					}
 				}
 
-				&:nth-child(3) {
-					height: fit-content;
-					.icon {
-						i {
-							font-size: 2rem;
-						}
-					}
-				}
+				// &:nth-child(3) {
+				// 	// height: fit-content;
+				// 	.icon {
+				// 		i {
+				// 			font-size: 2rem;
+				// 		}
+				// 	}
+				// }
 			}
 
 			@media screen and (min-width: 43em) {
