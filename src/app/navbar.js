@@ -1,3 +1,5 @@
+import brandLogo from '../media/vtals-brand-logo.png';
+
 const navbar = document.querySelector('.navbar');
 
 const navTemplate = (cb) => {
@@ -5,20 +7,20 @@ const navTemplate = (cb) => {
     <nav class="container">
 				<div class="brand-wrap">
 					<a href="/">
-						<h2 class="logo">V-TALS</h2>
+						<img src="${brandLogo}" class="logo" alt="vtals brand logo" />
 					</a>
 				</div>
 
 				<ul class="nav-links">
 					<div class="wrap">
 						<li class="link-list">
-							<a href="#" class="link">Home</a>
+							<a href="/" class="link">Home</a>
 						</li>
 						<li class="link-list">
-							<a href="#" class="link">About</a>
+							<a href="/about" class="link">About</a>
 						</li>
 						<li class="link-list">
-							<a href="#" class="link">Products</a>
+							<a href="#" class="link to-product-btn">Products</a>
 						</li>
 					</div>
 
@@ -38,7 +40,7 @@ const navTemplate = (cb) => {
 
 					<div class="wrap">
 						<div class="link-list">
-							<a href="#" class="link contact">Contact</a>
+							<a href="/contact" class="link contact">Contact</a>
 						</div>
 					</div>
 
@@ -58,8 +60,21 @@ export const renderNavbar = () => {
 	if (navbar) {
 		navbar.innerHTML += navTemplate();
 
+		// blocking off the product page from working until products have been uploaded with Contentful, afterward, the product page will be made open
+		const toProductBtn = document.querySelector('.to-product-btn');
+
+		if (toProductBtn) {
+			toProductBtn.addEventListener('click', (e) => {
+				e.preventDefault();
+
+				alert(
+					'Products not rendered yet... Upload your products with Contentful'
+				);
+			});
+		}
+
 		document.addEventListener('scroll', () => {
-			if (scrollY >= 500) {
+			if (scrollY >= 100) {
 				navbar.classList.add('update-nav-bg');
 			} else navbar.classList.remove('update-nav-bg');
 		});

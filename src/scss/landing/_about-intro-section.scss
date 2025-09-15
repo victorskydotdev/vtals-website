@@ -6,7 +6,6 @@
 	.wrap {
 		width: 90%;
 		margin: 0 auto;
-		// background: teal;
 		display: grid;
 		gap: 5em;
 
@@ -40,7 +39,7 @@
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					color: resets.$grey;
+					color: resets.$dark;
 					text-align: center;
 
 					.heading {
@@ -77,7 +76,7 @@
 					@include resets.outfit-font();
 					font-size: 2.5rem;
 					margin-bottom: 0.5em;
-					color: resets.$grey;
+					color: resets.$dark;
 				}
 
 				.subtext {

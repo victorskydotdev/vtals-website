@@ -1,0 +1,83 @@
+@use '../global/resets';
+
+.our-story-section {
+	// background: red;
+	margin-bottom: 10em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.text-wrap {
+			margin-bottom: 1.5em;
+			width: 100%;
+
+			.heading {
+				text-align: center;
+				font-size: 2rem;
+				color: resets.$dark;
+			}
+		}
+
+		.content-wrap {
+			width: 100%;
+
+			display: grid;
+			gap: 1.5em;
+
+			.text {
+				@include resets.teachers-font();
+				font-weight: 500;
+				color: grey;
+				line-height: 30px;
+			}
+
+			.leader-message-wrap {
+				background: resets.$secondary-color;
+				padding: 1.5em 2em;
+				border-radius: 20px;
+
+				.masthead {
+					display: flex;
+					gap: 1em;
+					align-items: center;
+					margin-bottom: 1.5em;
+
+					.img-circle {
+						height: 50px;
+						width: 50px;
+						border-radius: 50%;
+						background: resets.$light;
+					}
+
+					.wrap {
+						color: resets.$light;
+					}
+				}
+
+				.quote-wrap {
+					.text {
+						color: resets.$light;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+
+			width: 70%;
+
+			.text-wrap {
+				.heading {
+					font-size: 2.9rem;
+
+					text-align: left;
+				}
+			}
+		}
+	}
+}

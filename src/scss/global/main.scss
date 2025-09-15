@@ -6,3 +6,16 @@
 @use '../landing/cta-section';
 @use '../landing/testimonial-section';
 @use '../global/footer';
+
+@use '../modals/newsletter-modal';
+
+// contact page styles
+@use '../contact/contact-main';
+@use '../contact/contact-info-section';
+@use '../contact/map-section';
+
+// about page styles
+@use '../about/about-main';
+@use '../about/our-story-section';
+@use '../about/our-team-section';
+@use '../about/numbers-section';

@@ -1,0 +1,83 @@
+@use '../global/resets';
+
+.our-team-section {
+	background: #f9f9f9;
+	padding: 4em 0 7em 0;
+	margin-bottom: 6em;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 90%;
+		height: 1px;
+		background: resets.$bg-gradient;
+		left: 5%;
+		top: 0;
+	}
+
+	.container {
+		.text-wrap {
+			width: 100%;
+			margin: 0 auto 4em;
+
+			.heading {
+				text-align: center;
+				font-size: 2rem;
+				color: resets.$dark;
+				width: 90%;
+				margin: 0 auto;
+				margin-bottom: 0.3em;
+			}
+
+			.subtext {
+				text-align: center;
+				line-height: 30px;
+				color: grey;
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			@media screen and (min-width: 62em) {
+				width: 50%;
+
+				.heading {
+					font-size: 2.9rem;
+				}
+
+				.subtext {
+					font-size: 17px;
+					width: 80%;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.team-wrap {
+			display: grid;
+			gap: 1.5em;
+			width: 90%;
+			margin: 0 auto;
+
+			.card {
+				height: 350px;
+				width: 100%;
+				background: teal;
+				border-radius: 20px;
+
+				.img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+}

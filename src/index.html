@@ -34,8 +34,7 @@
 
 				<div class="text-animation-wrap">
 					<h1 class="heading">
-						Construction supplies you need to start complete your building
-						projects
+						Building materials you need to start complete your building projects
 					</h1>
 
 					<p class="subtext">
@@ -45,7 +44,7 @@
 					</p>
 
 					<div class="btn-wrap">
-						<button class="btn">
+						<button class="btn to-product-btn">
 							<span class="text">See our products</span>
 							<span class="icon">
 								<i class="fa-solid fa-arrow-right"></i>
@@ -62,6 +61,10 @@
 			<!-- <button class="swiper-button-prev"></button>
 			<button class="swiper-button-next"></button> -->
 		</main>
+
+		<div class="showcase-slider-section">
+			<div class="container"></div>
+		</div>
 
 		<div class="about-intro-section">
 			<div class="wrap">
@@ -96,7 +99,7 @@
 						</p>
 
 						<div class="btn-wrap">
-							<button class="btn">
+							<button class="btn to-product-btn">
 								<span class="text">See our products</span>
 								<span class="icon">
 									<i class="fa-solid fa-arrow-right"></i>
@@ -105,6 +108,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="second-section">
 					<div class="container">
 						<div class="first-wrap">
@@ -244,7 +248,7 @@
 					</p>
 
 					<div class="btn-wrap">
-						<button class="btn">
+						<button class="btn to-product-btn">
 							<span class="text">See our products</span>
 							<span class="icon">
 								<i class="fa-solid fa-arrow-right"></i>
@@ -253,13 +257,20 @@
 					</div>
 				</div>
 
-				<div class="review-card">
+				<div class="review-card review-element">
 					<img src="./media/bg-imgs/man.jpg" alt="" class="img" />
 
-					<button class="play-btn">
+					<button class="play-btn video-play-btn">
 						<i class="fa-solid fa-play"></i>
 					</button>
 				</div>
+			</div>
+
+			<!-- video play button modal -->
+			<div class="review-video-modal">
+				<button class="video-close-btn">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
 			</div>
 
 			<div class="brand-wrap">
@@ -293,7 +304,7 @@
 				</h4>
 
 				<div class="btn-wrap">
-					<button class="btn">
+					<button class="btn to-product-btn">
 						<span class="text">See our products</span>
 						<span class="icon">
 							<i class="fa-solid fa-arrow-right"></i>
@@ -303,58 +314,23 @@
 			</div>
 		</div>
 
-		<footer class="footer">
+		<footer class="footer"></footer>
+
+		<!-- newsletter success modal -->
+		<div class="newsletter-modal">
 			<div class="container">
-				<div class="wrap">
-					<div class="brand">
-						<img src="./media/brand-logo.png" alt="" class="img" />
-					</div>
-				</div>
-
-				<div class="wrap">
-					<div class="wrapper">
-						<h4 class="heading">Quick links</h4>
-
-						<ul class="footer-links">
-							<li><a href="#" class="link">Home</a></li>
-							<li><a href="#" class="link">about</a></li>
-							<li><a href="#" class="link">Our products</a></li>
-							<li><a href="#" class="link">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="wrap">
-					<div class="wrapper">
-						<h4 class="heading">
-							Subscribe to our newsletter and be the first to get product
-							updates and discounts
-						</h4>
-
-						<form action="" class="newsletter-form">
-							<input
-								type="email"
-								placeholder="johndoe@gmail.com"
-								class="form-input" />
-
-							<div class="btn-wrap">
-								<button type="submit" class="submit-btn">
-									<span class="text">Submit</span>
-									<!-- <span class="icon">
-										<i class="fa-solid fa-arrow-right"></i>
-									</span> -->
-								</button>
-							</div>
-						</form>
+				<div class="text-wrap">
+					<div class="icon-wrap">
+						<img src="./media/email.png" alt="" class="icon" />
 					</div>
 
-					<div class="social-media-wrap">
-						<a href="#">Facebook</a>
-						<a href="#">Instagram</a>
-						<a href="#">X</a>
-					</div>
+					<h3 class="heading">
+						Well done! You've successfully signed up to our newsletter
+					</h3>
+
+					<button class="newsletter-close-btn btn">Close</button>
 				</div>
 			</div>
-		</footer>
+		</div>
 	</body>
 </html>

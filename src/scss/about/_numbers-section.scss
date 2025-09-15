@@ -1,0 +1,72 @@
+@use '../global/resets';
+
+.numbers-section {
+	margin-bottom: 7em;
+
+	.container {
+		border-radius: 20px;
+
+		.text-wrap {
+			margin-bottom: 2em;
+
+			.heading {
+				text-align: center;
+				font-size: 2rem;
+				color: resets.$dark;
+			}
+		}
+
+		.numbers-wrap {
+			background: resets.$secondary-color;
+			padding: 2em 1em;
+			display: grid;
+			place-content: center;
+			width: 90%;
+			margin: 0 auto;
+			border-radius: 20px;
+
+			.content {
+				display: grid;
+				gap: 2em;
+				color: resets.$light;
+
+				.first-wrap,
+				.second-wrap,
+				.third-wrap {
+					display: flex;
+					align-items: center;
+					gap: 0.5em;
+
+					.number {
+						font-size: 2.9rem;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.numbers-wrap {
+				.content {
+					display: flex;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 70%;
+			margin: 0 auto;
+
+			.text-wrap {
+				.heading {
+					font-size: 2.9rem;
+				}
+			}
+
+			.numbers-wrap {
+				.content {
+					display: flex;
+				}
+			}
+		}
+	}
+}

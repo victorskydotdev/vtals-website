@@ -1,0 +1,149 @@
+@use '../global/resets';
+
+.contact-main {
+	background: resets.$dark;
+	padding-top: 10em;
+	padding-bottom: 5em;
+	margin-bottom: 7em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		display: grid;
+		align-items: center;
+		gap: 4em;
+		// justify-content: center;
+
+		.text-wrap {
+			width: 100%;
+			text-align: center;
+
+			.heading {
+				color: resets.$light;
+				font-size: 2.9rem;
+				line-height: 50px;
+				margin-bottom: 0.5em;
+			}
+
+			.subtext {
+				color: resets.$light;
+				line-height: 30px;
+			}
+		}
+
+		.form-wrap {
+			width: 100%;
+			background: resets.$light;
+			min-height: 500px;
+			padding-top: 3em;
+			border-radius: 20px;
+			padding-bottom: 3em;
+			box-shadow: -8px -8px 30px rgba(0, 0, 0, 0.3);
+
+			.wrapper {
+				// background: teal;
+				width: 90%;
+				margin: 0 auto;
+
+				.text-area {
+					margin-bottom: 1.5em;
+
+					.heading {
+						color: resets.$secondary-color;
+						font-size: 1.5rem;
+					}
+				}
+
+				.contact-form {
+					display: grid;
+					gap: 1em;
+
+					.wrap {
+						display: grid;
+						gap: 1em;
+
+						input,
+						textarea {
+							width: 100%;
+							padding: 1em;
+							border: none;
+							// border-radius: 5px;
+							border-bottom: 1.5px gray solid;
+							outline: none;
+							text-transform: capitalize;
+							color: resets.$grey;
+							font-weight: 500;
+
+							&:focus {
+								border-bottom: #eb1f24 solid 1.5px;
+							}
+						}
+
+						textarea {
+							height: 150px;
+						}
+					}
+
+					.btn-wrap {
+						padding-top: 1em;
+
+						.btn {
+							@include resets.main-btn();
+							box-shadow: unset;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			width: 50%;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		position: relative;
+		background: transparent;
+		margin-bottom: 25em;
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 75vh;
+			width: 100%;
+			top: 0;
+			left: 0;
+			background: resets.$dark;
+		}
+
+		.container {
+			display: flex;
+			width: 75%;
+
+			.text-wrap {
+				max-width: 450px;
+				text-align: left;
+				position: relative;
+				z-index: 1;
+			}
+
+			.form-wrap {
+				position: absolute;
+				width: 450px;
+				top: 30%;
+				right: 15%;
+				z-index: 3;
+
+				.contact-form {
+					.wrap {
+						display: flex !important;
+						gap: 0.7em !important;
+					}
+				}
+			}
+		}
+	}
+}

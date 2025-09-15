@@ -1,0 +1,90 @@
+@use '../global/resets';
+
+.newsletter-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 500ms ease-in;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		background: resets.$light;
+		height: 40vh;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+
+		.text-wrap {
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+
+			.icon-wrap {
+				// background: resets.$secondary-color;
+				background: resets.$light;
+				box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.253);
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 1.5em;
+
+				.icon {
+					width: 20px;
+					transform: rotate(-25deg);
+				}
+			}
+
+			.heading {
+				color: resets.$dark;
+				margin-bottom: 1em;
+				font-size: 1.3rem;
+				line-height: 30px;
+			}
+
+			.btn {
+				background: resets.$secondary-color;
+				padding: 1em 2em;
+				border: none;
+				color: resets.$light;
+				border-radius: 8px;
+				cursor: pointer;
+				@include resets.teachers-font();
+				font-weight: 600;
+				font-size: 1rem;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 40%;
+
+			.text-wrap {
+				width: 60%;
+			}
+		}
+	}
+}
+
+.newsletter-success {
+	opacity: 1;
+	visibility: visible;
+}

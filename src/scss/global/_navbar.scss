@@ -1,13 +1,13 @@
 @use '../global/resets';
 
 .navbar {
-	// background: teal;
+	background: resets.$light;
 	height: 15vh;
 	display: flex;
-	position: fixed;
+	position: sticky;
+	top: 0;
 	width: 100%;
 	z-index: 5;
-	// display: none;
 	transition: all 500ms ease-in-out;
 
 	.container {
@@ -17,7 +17,13 @@
 		@include resets.breakpoints();
 
 		.brand-wrap {
-			background: red;
+			// background: red;
+			a {
+				.logo {
+					border-radius: 100px;
+					width: 130px;
+				}
+			}
 		}
 
 		.nav-links {
@@ -28,11 +34,13 @@
 					.link {
 						@include resets.teachers-font();
 						font-weight: 600;
+						color: resets.$grey !important;
 					}
 
 					.contact {
 						@include resets.btn();
-						background: resets.$light;
+						background: resets.$secondary-color;
+						color: resets.$light !important;
 					}
 				}
 			}
@@ -41,7 +49,7 @@
 				.facebook,
 				.instagram,
 				.x-twitter {
-					color: resets.$light;
+					color: resets.$grey;
 					font-size: 1.2rem;
 				}
 			}
@@ -94,29 +102,30 @@
 
 .update-nav-bg {
 	background: resets.$light;
+	box-shadow: 1px 0 20px rgba(0, 0, 0, 0.2);
 
-	.container {
-		.nav-links {
-			.wrap {
-				.link-list {
-					.link {
-						color: grey;
-					}
+	// .container {
+	// 	.nav-links {
+	// 		.wrap {
+	// 			.link-list {
+	// 				.link {
+	// 					color: grey;
+	// 				}
 
-					.contact {
-						background: resets.$secondary-color;
-						color: resets.$light !important;
-					}
-				}
-			}
+	// 				.contact {
+	// 					background: resets.$secondary-color;
+	// 					color: resets.$light !important;
+	// 				}
+	// 			}
+	// 		}
 
-			.social-media-wrap {
-				.facebook,
-				.instagram,
-				.x-twitter {
-					color: grey;
-				}
-			}
-		}
-	}
+	// 		.social-media-wrap {
+	// 			.facebook,
+	// 			.instagram,
+	// 			.x-twitter {
+	// 				color: grey;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
