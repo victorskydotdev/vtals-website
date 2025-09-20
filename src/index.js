@@ -8,6 +8,10 @@ import { triggerSwiper } from './app/swiper2';
 import { renderReviewVideo } from './app/fetch-scripts/testimonial-script';
 import { navigateToProdPage } from './app/fetch-scripts/products-script';
 
+import { renderSelectedProdCategory } from './app/fetch-scripts/render-products';
+
+import { cartFunct } from './app/fetch-scripts/cart';
+
 import { renderFooter } from './app/footer';
 
 import { sendNewsletterEmail } from './app/fetch-scripts/send-newsletter';
@@ -21,6 +25,9 @@ triggerPageTransition();
 
 renderReviewVideo(); // review from Contentful, video rendering function call
 navigateToProdPage();
+renderSelectedProdCategory();
+
+cartFunct();
 
 triggerSwiper();
 

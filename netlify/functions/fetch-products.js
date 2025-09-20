@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const accessToken = process.env.CONTENTFUL_API;
-const spaceId = process.env.SPACE_ID;
+const spaceId = process.env.CONTENTFUL_SPACE_ID;
 const contentfulEnvironment = process.env.CONTENTFUL_ENVIRONMENT;
 
 // console.log('Access Token:', accessToken);
@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
 		const res = await fetch(url);
 		const data = await res.json();
 
-		// console.log(data);
+		console.log(data);
 
 		return {
 			statusCode: 200,

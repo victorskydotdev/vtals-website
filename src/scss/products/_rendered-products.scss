@@ -1,0 +1,66 @@
+@use '../global/resets';
+
+.product-render-section {
+	padding: 7em 0 0 0;
+	margin-bottom: 7em;
+
+	.render-container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 1em;
+
+		.product-card {
+			// background: teal;
+			width: 100%;
+			min-height: 300px;
+
+			.img-wrap {
+				width: 100%;
+				height: 250px;
+				margin-bottom: 1em;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+
+			.product-title {
+				color: resets.$dark;
+				margin-bottom: 1em;
+			}
+
+			.product-price {
+				margin-bottom: 1em;
+				color: resets.$grey;
+				font-size: 15px;
+			}
+
+			.btn-wrap {
+				.product-btn {
+					@include resets.main-btn();
+					box-shadow: unset;
+					@include resets.teachers-font();
+					color: #fff;
+					padding: 0.8em 0.8em 0.8em 1.2em;
+
+					.text {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media screen and (min-width: 62em) {
+			grid-template-columns: repeat(4, 1fr);
+			// display: flex;
+		}
+	}
+}

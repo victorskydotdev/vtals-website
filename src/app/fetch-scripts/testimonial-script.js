@@ -12,6 +12,12 @@ const renderReviewVideo = async () => {
 
 		if (!response.ok) {
 			console.log('No data sent');
+
+			if (videoPlayBtn) {
+				videoPlayBtn.addEventListener('click', () => {
+					alert('video not available. Reload page!');
+				});
+			}
 		} else {
 			const data = await response.json();
 

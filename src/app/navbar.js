@@ -20,7 +20,7 @@ const navTemplate = (cb) => {
 							<a href="/about" class="link">About</a>
 						</li>
 						<li class="link-list">
-							<a href="#" class="link to-product-btn">Products</a>
+							<a href="/contact" class="link">Contact</a>
 						</li>
 					</div>
 
@@ -40,7 +40,7 @@ const navTemplate = (cb) => {
 
 					<div class="wrap">
 						<div class="link-list">
-							<a href="/contact" class="link contact">Contact</a>
+							<a href="/products" class="link contact">Products</a>
 						</div>
 					</div>
 
@@ -62,16 +62,6 @@ export const renderNavbar = () => {
 
 		// blocking off the product page from working until products have been uploaded with Contentful, afterward, the product page will be made open
 		const toProductBtn = document.querySelector('.to-product-btn');
-
-		if (toProductBtn) {
-			toProductBtn.addEventListener('click', (e) => {
-				e.preventDefault();
-
-				alert(
-					'Products not rendered yet... Upload your products with Contentful'
-				);
-			});
-		}
 
 		document.addEventListener('scroll', () => {
 			if (scrollY >= 100) {

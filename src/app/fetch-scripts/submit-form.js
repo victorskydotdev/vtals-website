@@ -32,6 +32,8 @@ const submitForm = () => {
 					alert(
 						`Your form has been submitted successfully, click Ok to get redirected to the home page`
 					);
+
+					window.location.href = '/';
 				}
 			} catch (error) {
 				console.log('Form not submitted:', error.message);

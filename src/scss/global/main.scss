@@ -19,3 +19,12 @@
 @use '../about/our-story-section';
 @use '../about/our-team-section';
 @use '../about/numbers-section';
+
+// product page style
+@use '../products/product-main';
+@use '../products/product-cat-section';
+
+// product render page
+@use '../products/rendered-products';
+
+@use '../cart/cart-modal';

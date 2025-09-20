@@ -23,14 +23,22 @@ module.exports = {
 			filename: './about/index.html',
 			inject: 'body',
 		}),
+
 		new HtmlWebpackPlugin({
 			template: './src/html/products.html',
 			filename: './products/index.html',
 			inject: 'body',
 		}),
+
 		new HtmlWebpackPlugin({
 			template: './src/html/contact.html',
 			filename: './contact/index.html',
+			inject: 'body',
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/selected-products.html',
+			filename: './products/selected-products.html',
 			inject: 'body',
 		}),
 	],
