@@ -15,7 +15,7 @@ export const renderSelectedProdCategory = () => {
 		productRenderWrap.innerHTML = fetchedProducts
 			.map((product, index) => {
 				// console.log('PRODUCT:', product);
-				const { title, image, description, price } = product;
+				const { title, image, description } = product;
 
 				return `
           <div class="product-card" data-index="${index}">
@@ -24,7 +24,7 @@ export const renderSelectedProdCategory = () => {
             </div>
             
             <h3 class="product-title">${title}</h3>
-            <!-- <p class="product-price">NGN${price}</p> -->
+            
 
             <div class="btn-wrap">
               <button class="product-btn" data-index="${index}">

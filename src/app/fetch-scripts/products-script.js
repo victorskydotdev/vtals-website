@@ -30,7 +30,7 @@ const navigateToProdPage = () => {
 					return item.metadata.tags.map((tag) => tag.sys.id);
 				});
 
-				// console.log('FlatMapped Category Array:', categoryId);
+				console.log('FlatMapped Category Array:', categoryId);
 
 				if (categoryCards) {
 					categoryCards.forEach((card) => {
@@ -59,7 +59,6 @@ const navigateToProdPage = () => {
 									return {
 										id: item.sys.id,
 										title: f.productTitle,
-										price: f.price,
 										description: f.productDescription,
 										slug: f.slug,
 										image: imageUrl, // ✅ Correct URL from includes.Asset
