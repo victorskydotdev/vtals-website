@@ -1,6 +1,6 @@
 const body = document.querySelector('.body');
 
-const reviewVideoModal = document.querySelector('.review-video-modal');
+const reviewCard = document.querySelector('.review-card');
 
 const videoPlayBtn = document.querySelector('.video-play-btn');
 
@@ -32,9 +32,10 @@ const renderReviewVideo = async () => {
 
 			const videoUrl = `https:${asset.fields.file.url}`;
 
-			if (videoPlayBtn && reviewVideoModal) {
-				videoPlayBtn.addEventListener('click', () => {
-					reviewVideoModal.innerHTML += `
+			if (reviewCard) {
+				alert('video card present');
+
+				reviewCard.innerHTML = `
             <div class="video-container">
               <video controls>
                 <source src="${videoUrl}" type="video/mp4">
@@ -43,19 +44,10 @@ const renderReviewVideo = async () => {
             </div> 
           `;
 
-					reviewVideoModal.classList.add('show-video');
+				// reviewVideoModal.classList.add('show-video');
 
-					const videoCloseBtn = document.querySelector('.video-close-btn');
-					const videoContainer = document.querySelector('.video-container');
-
-					if (videoCloseBtn) {
-						videoCloseBtn.addEventListener('click', () => {
-							reviewVideoModal.classList.remove('show-video');
-
-							// alert('Hello world');
-						});
-					}
-				});
+				// const videoCloseBtn = document.querySelector('.video-close-btn');
+				// const videoContainer = document.querySelector('.video-container');
 			}
 		}
 	} catch (error) {

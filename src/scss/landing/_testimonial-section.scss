@@ -21,6 +21,7 @@
 		width: 90%;
 		margin: 0 auto;
 		padding: 2em 0;
+		margin-bottom: 7em;
 
 		.text-area {
 			width: 90%;
@@ -86,30 +87,20 @@
 			position: relative;
 			margin-bottom: 4em;
 
-			// .play-btn {
-			// 	position: absolute;
-			// 	top: 50%;
-			// 	left: 50%;
-			// 	transform: translate(-50%, -50%);
-			// 	z-index: 1;
-			// 	height: 50px;
-			// 	width: 50px;
-			// 	display: flex;
-			// 	align-items: center;
-			// 	justify-content: center;
-			// 	background: resets.$light;
-			// 	border: none;
-			// 	border-radius: 50%;
-			// 	cursor: pointer;
+			.video-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-			// 	.fa-solid {
-			// 		color: resets.$secondary-color;
-			// 	}
-			// }
+				video {
+					height: 500px;
+					border: solid 2px #eb1f24;
+					border-radius: 20px;
+				}
+			}
 		}
 
 		@media screen and (min-width: 62em) {
-			// background: red;
 			display: flex;
 			gap: 4em;
 
@@ -124,13 +115,7 @@
 			}
 
 			.review-card {
-				height: 500px;
-				width: 400px;
-				background: teal;
-
-				img {
-					display: none;
-				}
+				height: 380px;
 			}
 		}
 	}
@@ -183,64 +168,5 @@
 
 	@media screen and (min-width: 62em) {
 		margin-bottom: 12em;
-
-		.review-card {
-			height: 380px;
-		}
 	}
-}
-
-.review-video-modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: none;
-
-	background: rgba(0, 0, 0, 0.808);
-	z-index: 5;
-	// display: none;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 500ms ease-in;
-
-	.video-close-btn {
-		background: #fff;
-		position: absolute;
-		right: 5%;
-		top: 5%;
-		border: 2px solid #fff;
-		height: 30px;
-		width: 30px;
-		cursor: pointer;
-		border-radius: 50%;
-		z-index: 5;
-
-		i {
-			color: resets.$secondary-color;
-		}
-	}
-
-	.video-container {
-		width: 70%;
-		margin: 0 auto;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		// background: teal;
-
-		video {
-			width: 100%;
-			height: 80vh;
-			// border-radius: 20px;
-			cursor: pointer;
-		}
-	}
-}
-
-.show-video {
-	opacity: 1;
-	visibility: visible;
 }
