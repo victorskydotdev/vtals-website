@@ -35,7 +35,7 @@ const renderReviewVideo = async () => {
 			if (reviewCard) {
 				alert('video card present');
 
-				reviewCard.innerHTML = `
+				reviewCard.innerHTML += `
             <div class="video-container">
               <video controls>
                 <source src="${videoUrl}" type="video/mp4">

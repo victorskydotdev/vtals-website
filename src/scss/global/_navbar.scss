@@ -58,11 +58,16 @@
 		.hamburger {
 			.menu-btn {
 				border: none;
-				background: red;
+				background: resets.$secondary-color;
 				height: 50px;
 				width: 50px;
 				border-radius: 10px;
 				cursor: pointer;
+
+				i {
+					color: #fff;
+					font-size: 18px;
+				}
 			}
 		}
 
