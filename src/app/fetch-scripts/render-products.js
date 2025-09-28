@@ -40,7 +40,9 @@ export const renderSelectedProdCategory = () => {
 			.join('');
 
 		const buttons = document.querySelectorAll('.product-btn');
-		console.log(buttons);
+		// buttons.forEach((btn) => {
+		// 	console.log(btn);
+		// });
 
 		if (buttons) {
 			buttons.forEach((button) => {
@@ -48,7 +50,7 @@ export const renderSelectedProdCategory = () => {
 					const index = Number(e.currentTarget.dataset.index);
 					const selectedProduct = fetchedProducts[index];
 
-					console.log(selectedProduct);
+					// console.log(selectedProduct);
 
 					// Retrieve the current cart or create an empty array
 					const cart = JSON.parse(sessionStorage.getItem('cart')) || [];
@@ -75,7 +77,7 @@ export const renderSelectedProdCategory = () => {
 					// Save back to sessionStorage
 					sessionStorage.setItem('cart', JSON.stringify(cart));
 
-					console.log('🛒 Cart Updated:', cart);
+					// console.log('🛒 Cart Updated:', cart);
 					alert(`${selectedProduct.title} added to cart!`);
 				});
 			});

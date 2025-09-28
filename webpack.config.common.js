@@ -41,6 +41,13 @@ module.exports = {
 			filename: './products/selected-products.html',
 			inject: 'body',
 		}),
+
+		// cart page
+		new HtmlWebpackPlugin({
+			template: './src/html/cart.html',
+			filename: './cart/index.html',
+			inject: 'body',
+		}),
 	],
 
 	module: {

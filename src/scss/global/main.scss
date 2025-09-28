@@ -27,4 +27,5 @@
 // product render page
 @use '../products/rendered-products';
 
-@use '../cart/cart-modal';
+@use '../cart/cart-main';
+@use '../cart/quote-form';

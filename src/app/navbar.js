@@ -11,7 +11,7 @@ const navTemplate = (cb) => {
 					</a>
 				</div>
 
-				<ul class="nav-links">
+				<ul class="nav-links mobile-nav">
 					<div class="wrap">
 						<li class="link-list">
 							<a href="/" class="link">Home</a>
@@ -51,6 +51,10 @@ const navTemplate = (cb) => {
 						<button class="menu-btn">
 							<i class="fa-solid fa-bars"></i>
 						</button>
+						
+						<button class="menu-close-btn">
+							<i class="fa-solid fa-xmark"></i>
+						</button>
 					</div>
 			</nav>
   `;
@@ -68,5 +72,15 @@ export const renderNavbar = () => {
 				navbar.classList.add('update-nav-bg');
 			} else navbar.classList.remove('update-nav-bg');
 		});
+
+		const menuBtn = document.querySelector('.menu-btn');
+
+		const mobileNav = document.querySelector('.mobile-nav');
+
+		if (menuBtn) {
+			menuBtn.addEventListener('click', () => {
+				mobileNav.classList.toggle('show-mobile-nav');
+			});
+		}
 	}
 };

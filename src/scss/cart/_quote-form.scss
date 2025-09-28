@@ -1,0 +1,121 @@
+@use '../global/resets';
+
+.quote-form-modal {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: rgb(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	z-index: 10;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+	transition: all 500ms ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		background: resets.$light;
+		padding: 2em;
+		border-radius: 20px;
+
+		.form-masthead {
+			display: flex;
+			justify-content: space-between;
+
+			.heading {
+				width: 80%;
+			}
+
+			.form-close-btn-wrap {
+				padding-top: 0.4em;
+
+				.close-btn {
+					background: transparent;
+					color: resets.$secondary-color;
+					border: none;
+					cursor: pointer;
+
+					i {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+
+		.quote-form {
+			// width: 90%;
+			padding: 3em 0;
+
+			.wrap {
+				display: grid;
+				gap: 1em;
+
+				input,
+				textarea {
+					width: 100%;
+					padding: 1em;
+					border: none;
+					// border-radius: 5px;
+					border-bottom: 1.5px gray solid;
+					outline: none;
+					text-transform: capitalize;
+					color: resets.$grey;
+					font-weight: 500;
+					@include resets.outfit-font();
+					font-size: 15px;
+
+					&:focus {
+						border-bottom: #eb1f24 solid 1.5px;
+					}
+				}
+
+				textarea {
+					height: 100px;
+				}
+			}
+
+			.btn-wrap {
+				padding-top: 2em;
+
+				.btn {
+					@include resets.btn();
+					background: resets.$secondary-color;
+					color: resets.$light !important;
+					cursor: pointer;
+					width: 100%;
+
+					.quote-btn-loader {
+						display: none;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 80%;
+			margin: 0 auto;
+			padding: 3em;
+
+			.quote-form {
+				.btn-wrap {
+					.btn {
+						width: unset;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+		}
+	}
+}
+
+.show-form {
+	transform: translateY(0);
+}

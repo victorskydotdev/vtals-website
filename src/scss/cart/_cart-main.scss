@@ -1,0 +1,142 @@
+@use '../global/resets';
+
+.cart-main {
+	padding-top: 5em;
+	margin-bottom: 7em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.text-wrap {
+			text-align: center;
+			margin-bottom: 1.5em;
+
+			.heading {
+				color: resets.$secondary-color;
+			}
+		}
+
+		.cart-wrap {
+			min-height: 500px;
+			// border: 20px solid #e1e1e1;
+			display: grid;
+			gap: 3em;
+
+			.cart-content {
+				display: grid;
+				// background: teal;
+				gap: 1.5em;
+
+				.cart-item-wrap {
+					border: 2px solid #e1e1e1;
+					padding: 0.4em;
+					border-radius: 20px;
+					display: flex;
+					justify-content: space-between;
+
+					.product-content {
+						// background: orange;
+						display: flex;
+						gap: 0.5em;
+
+						.img-wrap {
+							width: 150px;
+							height: 100px;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								border-radius: 15px;
+							}
+						}
+
+						.title {
+							color: resets.$dark;
+							@include resets.outfit-font();
+							padding-top: 0.5em;
+						}
+					}
+
+					.prod-function {
+						padding: 0.5em;
+
+						.fa-solid {
+							color: resets.$secondary-color;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			.quote-wrap {
+				background: resets.$light;
+				border-radius: 20px;
+				box-shadow: -10px 0 40px rgba(0, 0, 0, 0.253);
+				height: 200px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.wrap {
+					width: 90%;
+					margin: 0 auto;
+					text-align: center;
+					display: grid;
+					gap: 1em;
+
+					.heading {
+						color: resets.$dark;
+						@include resets.outfit-font();
+						width: 80%;
+						margin: 0 auto;
+						line-height: 30px;
+					}
+
+					.btn-wrap {
+						display: flex;
+						justify-content: center;
+
+						.btn {
+							@include resets.btn();
+							background: resets.$secondary-color;
+							color: resets.$light !important;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.cart-wrap {
+				border: 20px solid #e1e1e1;
+				padding: 3em;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 80%;
+
+			.cart-wrap {
+				display: flex;
+				position: relative;
+				justify-content: space-between;
+				min-height: unset !important;
+
+				.cart-content {
+					width: 50%;
+				}
+
+				.quote-wrap {
+					position: sticky;
+					width: 40%;
+					top: 20%;
+					right: 0;
+				}
+			}
+		}
+	}
+}

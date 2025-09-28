@@ -27,9 +27,25 @@
 		}
 
 		.nav-links {
-			display: none;
+			position: fixed;
+			background: resets.$light;
+			top: 15%;
+			right: 5%;
+			width: 70%;
+			height: fit-content;
+			display: grid;
+			padding: 4em 0;
+			place-content: center;
+			gap: 3em;
+			text-align: center;
+
+			box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+			transform: translateY(-150%);
+			transition: all 700ms ease-in;
 
 			.wrap {
+				display: grid;
+				gap: 2em;
 				.link-list {
 					.link {
 						@include resets.teachers-font();
@@ -41,11 +57,16 @@
 						@include resets.btn();
 						background: resets.$secondary-color;
 						color: resets.$light !important;
+						display: inline-block;
 					}
 				}
 			}
 
 			.social-media-wrap {
+				display: flex;
+				justify-content: center;
+				gap: 1.5em;
+
 				.facebook,
 				.instagram,
 				.x-twitter {
@@ -69,17 +90,30 @@
 					font-size: 18px;
 				}
 			}
+
+			.menu-close-btn {
+				display: none;
+			}
 		}
 
 		@media screen and (min-width: 43em) {
+			.nav-links {
+				width: 45%;
+			}
 		}
 		@media screen and (min-width: 62em) {
 			.nav-links {
 				display: flex;
 				gap: 2em;
-				// background: teal;
 				width: 60%;
 				justify-content: space-between;
+				align-items: center;
+
+				position: unset;
+				padding: unset;
+				text-align: unset;
+				box-shadow: unset;
+				transform: unset;
 
 				.wrap {
 					display: flex;
@@ -103,6 +137,18 @@
 			}
 		}
 	}
+}
+
+.show-mobile-nav {
+	transform: translateY(0) !important;
+}
+
+.remove-menu-btn {
+	display: none;
+}
+
+.show-close-btn {
+	display: block !important;
 }
 
 .update-nav-bg {

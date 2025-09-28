@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/8464da9b67.js"
+			crossorigin="anonymous"></script>
+
+		<!-- material symbols and icons cdn -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+
+		<!-- page title -->
+		<title>V-tals Integrated Business - Home</title>
+	</head>
+	<body class="body">
+		<header class="navbar"></header>
+
+		<!-- product navbar -->
+		<div class="product-navbar">
+			<div class="wrapper">
+				<ul class="nav-links">
+					<li class="cat-link">Products / <a href="/">Home</a></li>
+				</ul>
+
+				<ul class="cart-wrap">
+					<li class="cart-btn">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- end of product navbar -->
+
+		<div class="cart-main">
+			<div class="container">
+				<div class="text-wrap">
+					<h1 class="heading">Your quote cart</h1>
+				</div>
+
+				<div class="cart-wrap">
+					<div class="cart-content"></div>
+
+					<div class="quote-wrap">
+						<div class="wrap">
+							<h4 class="heading">
+								Get quote for your selected product categories directly in your
+								inbox
+							</h4>
+
+							<div class="btn-wrap">
+								<button class="btn get-quote-btn">Get Quote for free</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="quote-form-modal">
+			<div class="container">
+				<div class="form-masthead">
+					<h3 class="heading">Complete the form below to get your quote</h3>
+
+					<div class="form-close-btn-wrap">
+						<button class="close-btn form-close-btn">
+							<i class="fa-solid fa-xmark"></i>
+						</button>
+					</div>
+				</div>
+
+				<form class="quote-form">
+					<div class="wrap">
+						<input
+							type="text"
+							placeholder="Full name"
+							name="customer_name"
+							required />
+					</div>
+
+					<div class="wrap">
+						<input
+							type="text"
+							placeholder="Phone"
+							name="customer_phone"
+							required />
+					</div>
+
+					<div class="wrap">
+						<input
+							type="email"
+							placeholder="Email"
+							name="customer_email"
+							required />
+					</div>
+
+					<div class="wrap">
+						<textarea
+							name="addition_quote_message"
+							placeholder="Addition quote message"
+							id=""></textarea>
+					</div>
+
+					<div class="btn-wrap">
+						<button type="submit" class="quote-submit-btn btn">
+							<span class="submit-text">Submit Quote</span>
+							<i class="fa-solid quote-btn-loader fa-rotate-right fa-spin"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<footer class="footer"></footer>
+	</body>
+</html>
