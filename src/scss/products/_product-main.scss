@@ -59,13 +59,36 @@
 	margin-bottom: 4em;
 	position: relative;
 
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		inset: 0;
+		background: rgb(0, 0, 0, 0.5);
+	}
+
 	.container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		position: relative;
+		z-index: 1;
 
 		.text-wrap {
+			width: 90%;
+			margin: 0 auto;
+
 			.heading {
 				color: resets.$light;
 			}
