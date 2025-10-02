@@ -131,6 +131,12 @@
 				width: 300px;
 				background: teal;
 				border-radius: 20px;
+
+				.img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 	}
@@ -170,6 +176,6 @@
 	}
 
 	to {
-		transform: translateX(-50%);
+		transform: translateX(-100%);
 	}
 }
