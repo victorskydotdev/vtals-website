@@ -20,7 +20,7 @@ export const renderSelectedProdCategory = () => {
 				return `
           <div class="product-card" data-index="${index}">
             <div class='img-wrap'>
-              <img src="${image}" alt="${title}" class="product-image" />
+              <img src="${image}" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" alt="${title}" class="product-image" />
             </div>
             
             <h3 class="product-title">${title}</h3>
