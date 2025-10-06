@@ -46,6 +46,7 @@
 			.wrap {
 				display: grid;
 				gap: 2em;
+
 				.link-list {
 					.link {
 						@include resets.teachers-font();
@@ -69,7 +70,7 @@
 
 				.facebook,
 				.instagram,
-				.x-twitter {
+				.tiktok {
 					color: resets.$grey;
 					font-size: 1.2rem;
 				}

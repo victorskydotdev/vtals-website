@@ -40,6 +40,8 @@
 			border-radius: 20px;
 			padding-bottom: 3em;
 			box-shadow: -8px -8px 30px rgba(0, 0, 0, 0.3);
+			position: relative;
+			z-index: 2;
 
 			.wrapper {
 				// background: teal;
@@ -91,6 +93,15 @@
 						.btn {
 							@include resets.main-btn();
 							box-shadow: unset;
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							position: relative;
+
+							.icon {
+								position: absolute;
+								right: 5%;
+							}
 						}
 					}
 				}

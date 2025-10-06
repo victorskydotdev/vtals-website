@@ -25,17 +25,21 @@ const navTemplate = (cb) => {
 					</div>
 
 					<div class="social-media-wrap">
-						<a href="" class="facebook">
+						
+
+						<a class="facebook" href="https://www.facebook.com/vtalsbuildingmaterials/" target="_blank">
 							<i class="fa-brands fa-facebook-f"></i>
 						</a>
 
-						<a href="" class="instagram">
+						<a class="instagram" href="https://www.instagram.com/vtalsbuildingmaterials/" target="_blank">
 							<i class="fa-brands fa-instagram"></i>
 						</a>
 
-						<a href="" class="x-twitter">
-							<i class="fa-brands fa-x-twitter"></i>
+						<a class="tiktok" href="http://www.tiktok.com/@vtalsbuildingmaterials" target="_blank">
+							<i class="fa-brands fa-tiktok"></i>
 						</a>
+
+						
 					</div>
 
 					<div class="wrap">

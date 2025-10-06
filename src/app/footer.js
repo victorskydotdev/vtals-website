@@ -49,9 +49,11 @@ const footerTemplate = (cb) => {
 					</div>
 
 					<div class="social-media-wrap">
-						<a href="#">Facebook</a>
-						<a href="#">Instagram</a>
-						<a href="#">X</a>
+						<a href="https://www.facebook.com/vtalsbuildingmaterials/" target="_blank">Facebook</a>
+
+						<a href="https://www.instagram.com/vtalsbuildingmaterials/" target="_blank">Instagram</a>
+
+						<a href="http://www.tiktok.com/@vtalsbuildingmaterials" target="_blank">TikTok</a>
 					</div>
 				</div>
 			</div>
