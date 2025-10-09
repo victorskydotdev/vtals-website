@@ -1,4 +1,5 @@
 import './scss/global/main.scss';
+import 'ldrs/ring';
 
 import { renderNavbar } from './app/navbar';
 import { renderHeroSlider } from './app/hero-section-animation';

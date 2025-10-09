@@ -166,9 +166,32 @@
 			place-items: center;
 			place-content: center;
 			color: resets.$grey;
+			overflow: hidden;
+
+			.img {
+				width: 200px;
+			}
 
 			.heading {
 				font-size: 1.6rem;
+			}
+
+			&:nth-child(1) {
+				.img {
+					width: 150px;
+				}
+			}
+
+			&:nth-child(5) {
+				.img {
+					width: 100px;
+				}
+			}
+
+			&:nth-child(6) {
+				.img {
+					width: 100px;
+				}
 			}
 		}
 
@@ -176,6 +199,22 @@
 			display: grid;
 			width: 90%;
 			margin: 0 auto;
+		}
+
+		@media screen and (min-width: 43em) {
+			display: grid;
+			width: 90%;
+			margin: 0 auto;
+			grid-template-columns: repeat(3, 1fr);
+			// background: red;
+		}
+
+		@media screen and (min-width: 62em) {
+			display: grid;
+			width: 90%;
+			margin: 0 auto;
+			grid-template-columns: repeat(4, 1fr);
+			// background: red;
 		}
 	}
 
