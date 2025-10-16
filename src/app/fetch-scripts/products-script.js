@@ -30,14 +30,15 @@ const navigateToProdPage = () => {
 					return item.metadata.tags.map((tag) => tag.sys.id);
 				});
 
-				console.log('FlatMapped Category Array:', categoryId);
+				// console.log('FlatMapped Category Array:', categoryId);
 
 				if (categoryCards) {
 					categoryCards.forEach((card) => {
 						card.addEventListener('click', async (e) => {
 							// const id = card.getAttribute('data-tags-id');
 							const id = card.dataset.tagsId;
-							console.log('Card Category Id:', id);
+
+							// console.log('Card Category Id:', id);
 
 							if (categoryId.includes(id)) {
 								const matchedItems = data.data.items.filter((products) => {
@@ -61,7 +62,7 @@ const navigateToProdPage = () => {
 										title: f.productTitle,
 										description: f.productDescription,
 										slug: f.slug,
-										image: imageUrl, // ✅ Correct URL from includes.Asset
+										image: imageUrl, // Correct URL from includes.Asset
 										raw: item, // Keep raw entry if needed
 									};
 								});
@@ -76,7 +77,6 @@ const navigateToProdPage = () => {
 								window.location.href = '/products/selected-products';
 							} else {
 								alert('No products available in this category');
-								// console.log("They don't match!:", id);
 							}
 						});
 					});

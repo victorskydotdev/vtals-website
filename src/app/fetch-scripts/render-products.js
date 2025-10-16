@@ -12,7 +12,11 @@ export const renderSelectedProdCategory = () => {
 	// console.log('Fetched products in the product render page', fetchedProducts);
 
 	if (productRenderWrap && Array.isArray(fetchedProducts)) {
-		productRenderWrap.innerHTML = fetchedProducts
+		const randomProducts = fetchedProducts.slice().sort(() => {
+			return Math.random() - 0.5;
+		});
+
+		productRenderWrap.innerHTML = randomProducts
 			.map((product, index) => {
 				// console.log('PRODUCT:', product);
 				const { title, image, description } = product;
