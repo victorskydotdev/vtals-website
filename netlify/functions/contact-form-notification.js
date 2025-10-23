@@ -15,7 +15,7 @@ exports.handler = async (event) => {
 		console.log(firstname, surname, email, number, message);
 
 		const DOMAIN = process.env.MAILGUN_DOMAIN;
-		const toEmail = 'vtalsmedia@gmail.com';
+		const toEmail = 'admin@vtalsintegratedbusiness.com';
 
 		const mg = mailgun({ apiKey: process.env.MAILGUN_SECRET, domain: DOMAIN });
 

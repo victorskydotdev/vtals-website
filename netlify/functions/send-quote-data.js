@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
 			quoteItems,
 		} = JSON.parse(event.body);
 
-		const vtalsEmail = 'vtalsmedia@gmail.com';
+		const vtalsEmail = 'admin@vtalsintegratedbusiness.com';
 
 		const DOMAIN = process.env.MAILGUN_DOMAIN;
 
